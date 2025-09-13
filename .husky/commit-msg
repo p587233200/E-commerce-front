@@ -1,4 +1,5 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-npm commitlint
+# 使用 npx 執行 commitlint，並傳入 commit message 的檔案
+npx --no-install commitlint --edit "$1"
